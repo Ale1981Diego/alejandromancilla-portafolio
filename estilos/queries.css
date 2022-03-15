@@ -1,0 +1,338 @@
+/* Responsive - @medias */
+
+@media (min-width: 425px) {
+    
+    /* se modifica el tamaño de letra del html en general al 90% */
+    #body {
+        font-size: 90%;
+    }
+    /* se modifican los anchos del main y el footer al 90% */
+    main, footer {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .sobreMi-habilidades {
+        grid-template-columns: repeat(3, 100px);
+    }
+
+    .boton-curriculum button {
+        width: 12em;
+        height: 4em;
+    }
+
+    .boton-curriculum button a, .boton-curriculum button i {
+        font-size: 1.2em;
+    }
+
+}
+
+@media (min-width: 596px) {
+
+    .servicios .separacion {
+        height: 2em;
+        width: 100%;
+        margin: 0 auto;
+        border-bottom: 1px solid #464db3;
+    }
+
+    .servicio-article {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(2, 1.2fr);
+        grid-template-rows: repeat(3, 1.3fr);
+        border: none;
+    }
+
+    .servicio-article .servicio-div {
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+}
+/* @media  */
+
+@media (min-width: 768px) {
+    /* se modifica el tamaño de letra al 100% */
+    #body {
+        font-size: 100%;
+    }
+    /* header pasa a position static */
+    header {
+        padding: 0 1em;
+        position: static;
+        height: 5em;
+        border-bottom: 1px solid #464db3;
+    }
+
+    header nav {
+        height: 5em;
+        border-bottom: 1px solid #464db3;
+    }
+    /* se modifica el tamaño del logo */
+    #logo {
+        height: 2.5em;
+        padding: 0;
+    }
+
+    .menu {
+        display: flex;
+        width: 80%;
+        align-items: center;
+        position: static;
+        margin: 0;
+        height: 100%;
+    }
+
+    #menu li {
+        width: 80%;
+    }
+
+    .menu li a {
+        font-size: 1em;
+        color: var(--color);
+        display: block;
+        text-align: center;
+    }
+
+    .menu li a:hover {
+        font-size: 1.2em;
+        font-weight: bolder;
+        border-right: 1px solid #464db3;
+        transition: all 0.3s ease;
+    }
+
+    .menu li a i, .noMostrarLaptop, .fa-shapes {
+        display: none;
+    }
+
+    header nav div button {
+        padding: 0;
+    }
+    /* boton modo oscuro ó claro - modifica el tamaño */
+    #darkMode {
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    /* animación del boton modo oscuro ó claro - rota 360 grados */
+    #darkMode:hover {
+        font-size: 1.5em;
+        transition: all 0.5s ease;
+        transform: rotate(360deg);
+    }
+
+    header, main, footer {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    /* se muestra el contenedor aside - scroll top 0 */
+    .aside {
+        display: initial;
+    }
+
+    .inicio article {
+        flex-direction: row;
+        align-items: center;
+        border: none;
+    }
+
+    .inicio-presentacion {
+        width: 50%;
+    }
+
+    .sobreMi {
+        border: none;
+    }
+
+    .sobreMi-introduccion {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 5em;
+    }
+
+    .sobreMi-introduccion h2 {
+        text-align: center;
+    }
+
+    .sobreMi-introduccion p {
+        border: 1px solid #464db3;
+        border-radius: 0.5em;
+        padding: 1em;
+    }
+
+    .sobreMi-introduccion h2, .sobreMi-introduccion p {
+        width: 50%;
+    }
+
+    .sobreMi-habilidades-descarga {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3em;
+    }
+
+    .sobreMi-habilidades-descarga h2 {
+        text-align: center;
+    }
+
+    .servicios .separacion {
+        display: none;
+    }
+
+    .servicios h2 {
+        text-align: center;
+    }
+
+    .servicio-article {
+        grid-template-columns: repeat(3, 1.3fr);
+        grid-template-rows: repeat(2, 1.2fr);
+        gap: 1em;
+        width: 100%;
+    }
+
+    .servicio-article .servicio-div {
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .servicio-article .servicio-div div h3 {
+        font-size: 0.8em;
+    }
+
+    .servicio-article .servicio-div:hover {
+        border-bottom: 4px solid #464db3;
+    }
+
+    .portafolio {
+        border: none;
+    }
+
+    .portafolio-div {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .portafolio-imagen {
+        overflow: hidden;
+    }
+
+    .Java {
+        margin-right: 1em;
+    }
+    /* capa que se muestra al realizar un hover sobre los proyecto realizados */
+    .hover {
+        position: absolute;
+        top: 0;
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .hover h3 {
+        width: 0 auto;
+        color:#fff;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 40%;
+        transition: all 500ms ease-out;
+    }
+
+    .hover p, .hover a {
+        border-bottom: none;
+        color: #fff;
+        text-transform: uppercase;
+        transition: all 500ms ease-out;
+        line-height: 1.5;
+    }
+
+    .portafolio-JavaPython:hover > .hover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 0.5em;
+        width: 100%;
+        height: 100%;
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .portafolio-JavaPython:hover > .hover h3 {
+        margin-bottom: 0;
+    }
+
+    .portafolio-JavaPython:hover > .portafolio-imagen img {
+        transform: scale(1.1);
+    }
+
+    #form {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #form h2 {
+        width: 50%;
+        text-align: center;
+    }
+
+    #formulario {
+        width: 50%;
+    }
+
+    .datos-input input, .datos-input textarea {
+        max-width: 524px;
+    }
+
+    .datos-input textarea {
+        max-height: 10em;
+    }
+
+    .contacto {
+        padding: 0 1em 3.5em 1em;
+    }
+
+    .contacto-redes, .flex-contactame, .contacto-enlaces {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contacto-redes div, .flex-contactame div {
+        text-align: center;
+        align-items: center;
+    }
+
+    .contacto-redes div p, .flex-contactame div p {
+        margin-top: 0;
+    }
+
+    .contacto-enlaces div a {
+        display: inline;
+    }
+
+    .copy {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 920px) {
+    .sobreMi-habilidades-descarga h2 {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1190px) {
+    header, main, footer {
+        width: 75%;
+        margin: 0 auto;
+    }
+}

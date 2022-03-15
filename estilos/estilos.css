@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300;400&display=swap');
+
+/* variables a utilizar */
+:root {
+    --color: #333;
+    --colorIniciales: #000;
+    --colorLlaves: #464db3;
+    --background: #fff; 
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* modificaciones generales de la pagina */
+
+/* transición al realizar Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+#body {
+    width: 100%;
+    margin: 0;
+    /* padding: 1em 1em; */
+    color: var(--color);
+    background-color: var(--background);
+    font-family: 'M PLUS 1', sans-serif;
+    font-size: 80%;
+    position: relative;
+}
+
+/* personalizando el header  para dispositivos moviles */
+
+header {
+    padding: 0 1em;
+    width: 100%;
+    height: 3em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--background);
+    z-index: 999;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3em;
+}
+
+#logo {
+    height: 2em;
+    padding-left: 1em ;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1.3fr);
+    grid-template-rows: repeat(2, 1.2fr);
+    gap: 1em;
+    background-color: var(--background);
+    width: 100%;
+    list-style: none;
+    margin-bottom: -30em;
+    padding: 1em;
+    position: absolute;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* muestra el menú en dispositivos moviles al presionar sobre el icono del menú, clase que se agrega por medio de JS */
+
+.mostrar {
+    margin-bottom: 7.5em;
+}
+
+.menu li {
+    width: 100%;
+    padding: 1em 0;
+}
+
+.menu li .cerrar, li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.menu li .cerrar {
+    background: none;
+    border: none;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.menu li .cerrar, a{
+    color: #464db3;
+}
+
+header nav div {
+    display: flex;
+    margin-right: 1em;
+}
+
+header nav div button {
+    border: none;
+    background: none;
+}
+
+header nav div button i, i {
+    color:#464db3;
+    font-size: 1em;
+}
+
+/* fin header */
+
+/* menu para dispositivos moviles */
+
+
+
+/* elemento main*/
+
+main {
+    width: 100%;
+    padding: 0 1em;
+    
+}
+
+/* boton de scroll hacia el inicio */
+
+.aside {
+    display: none;
+    position: fixed;
+    right: .5em;
+    bottom: 7em;
+}
+
+.aside button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    color:#464db3;
+    cursor: pointer;
+}
+
+/* modeldeado del main */
+
+.inicio article {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #464db3;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.inicio-foto {
+    width: 11em;
+    margin: 0 auto;
+    border-radius: 10em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio-foto img {
+    width: 15em;
+}
+
+.inicio-presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inicio-presentacion h3 {
+    margin-top: 0;
+    color:#464db3;
+}
+
+.inicio-presentacion p {
+    text-align: center;
+}
+
+.sobreMi {
+    border-bottom: 1px solid #464db3;
+}
+
+.sobreMi-introduccion p {
+    text-align: justify;
+}
+
+.sobreMi-introduccion a {
+    text-decoration: none;
+    color: var(--color);
+    cursor: pointer;
+}
+
+.sobreMi-habilidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1.3fr);
+    grid-template-rows: repeat(2, 1.5fr);
+    gap: 1em;
+    padding: 1em;
+}
+
+.sobreMi-habilidades div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #464db3;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.sobreMi-habilidades div:hover {
+    background-color: rgba(17, 22, 71, 0.733);
+}
+
+.sobreMi-habilidades div i {
+    font-size: 2em;
+}
+
+.sobreMi-habilidades div h3 {
+    font-size: 1em;
+}
+
+.fa-html5 {
+    color: orange;
+}
+
+.fa-css3-alt, .fa-python {
+    color: rgb(43, 43, 243)
+}
+
+.fa-js {
+    color: yellow;
+}
+
+.fa-java {
+    color: rgb(255, 0, 0);
+}
+
+.fa-github {
+    color: #000;
+}
+
+.boton-curriculum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-curriculum button {
+    background-color: #464db3;
+    width: 10em;
+    height: 3em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.boton-curriculum button a, .boton-curriculum button a i {
+    color: #fff;
+    text-decoration: none;
+}
+
+.boton-curriculum button a i {
+    margin-left: 0.5em;
+}
+
+.boton-curriculum button:hover {
+    background-color: rgb(105, 111, 194);
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+}
+
+.servicio-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #464db3;
+}
+
+.servicio-article .servicio-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #464db3;
+    border-radius: 0.5em;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.servicio-article .servicio-div div i {
+    font-size: 1.5em;
+    padding-top: 1em;
+}
+
+.servicio-article .servicio-div div h3 {
+    font-size: 1em;
+}
+
+.servicio-article .servicio-div div p {
+    padding: 1em;
+    text-align: center;
+
+}
+
+.portafolio {
+    border-bottom: 1px solid #464db3;
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+.portafolio-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.portafolio-JavaPython {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #464db3;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.portafolio-imagen {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.hover h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.hover p {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1em;
+    border-bottom: 1px solid #464db3
+}
+
+.hover a {
+    text-decoration: none;
+    color: var(--color);
+    cursor: pointer;
+}
+
+.hover a:hover {
+    font-weight: bolder;
+}
+
+.portafolio-imagen img {
+    width: 100%;
+    border-radius: 0.5em;
+    margin: 0;
+    transition: all 500ms ease-out;
+}
+
+/* formulario */
+
+#form {
+    border-bottom: 1px solid #464db3;
+}
+
+#formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.datos-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.datos-input input {
+    margin: 0.5em 0;
+    height: 2em;
+    border: 1px solid var(--colorLlaves);
+    border-radius: 0.3em;
+}
+
+#datos-area {
+    width: 100%;
+    height: 10em;
+    margin: 0.5em 0;
+    border: 1px solid var(--colorLlaves);
+    border-radius: 0.3em;
+    font-family: 'M PLUS 1', sans-serif;
+}
+
+#btnSubmit {
+    border: none;
+    margin-bottom: 3em;
+    background-color: var(--colorLlaves);
+    width: 100%;
+    height: 2em;
+    border-radius: 0.3em;
+    color:#fff
+}
+
+.fa-paper-plane {
+    color: #fff;
+    margin-left: 0.5em;
+}
+
+/* final main */
+
+/* footer */
+
+footer {
+    padding: 0 1em 3.5em 1em;
+    margin: 0 auto;
+    width: 100%;
+} 
+
+.flex-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contacto-redes, .flex-contactame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contacto-redes div, .flex-contactame div {
+    width: 100%;
+}
+
+.contacto-enlaces {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: space-around; */
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.contacto-enlaces div a {
+    text-decoration: none;
+    color: var(--color);
+    display: block;
+    width: 8em;
+    height: 3em;
+    line-height: 3em;
+}
+
+.contacto-enlaces div a i {
+    margin-left: 0.5em;
+    font-size: 1.2em;
+}
+
+.contacto-enlaces div a:hover {
+    font-weight: bolder;
+}
+
+/* footer - logos de redes sociales - aplicacion de colores */
+
+.fa-linkedin-in {
+    color: rgb(43, 43, 243);
+}
+
+.fa-whatsapp {
+    color: rgb(32, 189, 32);
+}
+
+.fa-envelope {
+    color:rgb(187, 76, 76);
+}
+
+/* footer - propiedades del copyright */
+
+.copy {
+    width: 100%;
+    border-top: 1px solid #464db3;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.copy div a {
+    text-decoration: none;
+    color: var(--color);    
+}
+
+.iniciales {
+    color: var(--colorIniciales);
+}
+
+.llaves {
+    color: var(--colorLlaves);
+}
+

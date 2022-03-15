@@ -12,7 +12,7 @@ if (isset($_POST['enviar'])) {
         $email = mail($destino, $asunto, $mensaje, $header);
         if ($email) {
             echo '<script>alert("Envio exitoso!")</script>';
-            echo "<script>setTimeOut(\'location.href = `index.php`\',1000   </script>";
+            echo "<script>setTimeOut(\'location.href = `index.php`\',1000)</script>";
         }
     }
 }

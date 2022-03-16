@@ -153,5 +153,5 @@ const curriculum = div.querySelector('button');
 
 curriculum.addEventListener('click', e =>{    
     const a = e.target;
-    a.href = 'alejandromancilla-portafolio/documentos/Alejandro Mancilla.pdf'
+    a.href = '/documentos/Alejandro Mancilla.pdf'
 });

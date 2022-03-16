@@ -145,3 +145,13 @@ function validarFormulario(e) {
         e.preventDefault();
     }
 }
+
+/* descarga de curriculum */
+
+const div = document.querySelector('.boton-curriculum');
+const curriculum = div.querySelector('button');
+
+curriculum.addEventListener('click', e =>{    
+    const a = e.target;
+    a.href = '/documentos/Alejandro Mancilla.pdf'
+});

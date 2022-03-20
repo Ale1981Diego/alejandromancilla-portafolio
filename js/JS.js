@@ -83,7 +83,7 @@ let arr = [];
 /* agregamos eventos a cada input */
 
 nombre.addEventListener('blur', e => {
-    if (!(/^[A-Za-z ]+$/gm.test(nombre.value)) || nombre.value.length < 3)
+    if (!(/^[A-Za-z ÁÉÍÓÚáéíóú]+$/gm.test(nombre.value)) || nombre.value.length < 3)
     {
         nombre.style.backgroundColor = "rgba(255, 0, 0, 0.2)";
         arr.push("debe completar el nombre y el apellido");

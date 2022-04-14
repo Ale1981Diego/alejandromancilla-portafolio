@@ -65,6 +65,14 @@ btnTop.addEventListener('click', () => {
 });
 
 
+/* boton llamar */
+
+const llamar = document.querySelector('.phone');
+
+llamar.addEventListener('click', ()=>{
+    window.location.href = 'tel:+5491135850040';
+})
+
 /* validación formulario */
 
 /* se capturan los elementos del formulario */
@@ -148,10 +156,17 @@ function validarFormulario(e) {
 
 /* descarga de curriculum */
 
-/*const div = document.querySelector('.boton-curriculum');
+const div = document.querySelector('.boton-curriculum');
 const curriculum = div.querySelector('button');
 
-curriculum.addEventListener('click', e =>{    
-    const a = e.target;
-    a.href = '/documentos/Alejandro Mancilla.pdf'
-});*/
+curriculum.addEventListener('click', (e) =>{    
+    window.open('https://ale1981diego.github.io/alejandromancilla-portafolio/documentos/Alejandro%20Mancilla.pdf', '_blank');
+});
+
+
+/* comunicación por WhatsApp */
+
+const wtApp = document.querySelector('.whatsapp');
+wtApp.addEventListener('click', ()=>{
+    window.open('http://api.whatsapp.com/send?phone=541135850040', '_blank');
+});

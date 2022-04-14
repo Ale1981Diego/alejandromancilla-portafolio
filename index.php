@@ -47,6 +47,12 @@
                     <i class="fa-solid fa-circle-arrow-up"></i>
                 </button>
             </aside>
+            <!-- boton de llamada directa siempre se encuentra visible -->
+            <aside class="phone">
+                <button id="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </button>
+            </aside>
             <article>
                 <div class="inicio-foto">
                     <img src="imagenes/foto1.png" alt="mi foto de perfil">
@@ -99,7 +105,7 @@
                 </div>
                 <!-- boton de descarga de mi curriculum vitae -->
                 <div class="boton-curriculum">
-                    <button><a href="documentos/Alejandro Mancilla.pdf" target="_blank" title="descargá mi curriculum">Descarga CV<i class="fas fa-file-pdf"></i></a></button>
+                    <button><a href="#" target="_blank" title="descargá mi curriculum">Descarga CV<i class="fas fa-file-pdf"></i></a></button>
                 </div>
             </article>
         </section>
@@ -198,7 +204,7 @@
         </section>
         <section class="formulario" id="form">
             <h2>Contactame</h2>
-            <form action="https://alejandromancilla-desarrollador.000webhostapp.com/enviar.php" method="post" id="formulario">
+            <form action="https://alejandromancilla-desarrollador.000webhostapp.com/enviar.php" method="post" id="formulario"> <!--action="enviar.php"-->
                 <div class="datos-input">
                     <input type="text" placeholder="Nombre y apellido" name="nombre" id="nombre">
                     <input type="text" placeholder="Telefono" name="tel" id="tel">
@@ -226,7 +232,7 @@
                         <a href="http://github.com/Ale1981Diego" target="_blank" title="Sigueme en Git">GitHub<i class="fa-brands fa-github"></i></a>
                     </div>
                     <div>
-                        <a href="http://api.whatsapp.com/send?phone=541135850040" target="_blank" title="comunicate conmigo a través de  whatsapp">WhatsApp<i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" target="_blank" title="comunicate conmigo a través de  whatsapp" class="whatsapp">WhatsApp<i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>

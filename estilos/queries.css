@@ -130,6 +130,20 @@
     .aside {
         display: initial;
     }
+    
+    /* boton de llamadas a partir de 768px */
+
+    .phone #phone {
+        background-color: #464db3;
+    }
+
+    .fa-phone {
+        color: #fff;
+    }
+
+    .phone #phone:hover {
+        background-color: #0e0e1493;
+    }
 
     .inicio article {
         flex-direction: row;

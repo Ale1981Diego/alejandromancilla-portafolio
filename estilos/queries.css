@@ -116,9 +116,9 @@
     }
     /* animación del boton modo oscuro ó claro - rota 360 grados */
     #darkMode:hover {
-        font-size: 1.5em;
+        /*font-size: 1.5em;*/
         transition: all 0.5s ease;
-        transform: rotate(360deg);
+        transform: rotate(180deg);
     }
 
     header, main, footer {
